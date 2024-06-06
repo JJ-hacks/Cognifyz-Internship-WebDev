@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #2f89b3;
+        }
+
+        header {
+            position: fixed;
+            background-color: #41d8bf;
+            color: #fff;
+            text-align: center;
+            padding: 0px;
+            width: 100%;
+            top: 50px;
+            left: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            position: fixed;
+            background-color: #225763;
+            padding: 10px 0;
+            width: 100%;
+            top: 0px;
+            /* Adjusted to be below the fixed header */
+            left: 0;
+            z-index: 999;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 160px auto 20px auto;
+            /* Adjusted top margin to avoid overlap with fixed header and nav */
+            padding: 20px;
+            background-color: #3b50b2;
+            border-radius: 5px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            font-size: large;
+            color: #fff;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+        }
+
+        form {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: inline-block;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+        }
+
+        footer {
+            background-color: #41d8bf;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Elona Pets</h1>
+        <h3>This is for Level 2 Task 1 Internship</h3>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="Elona.html">Home</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Pet">Wikipedia</a></li>
+            <li><a href="Responsive card.html">Online Pet Store</a></li>
+            <li><a href="https://www.cognifyz.com/">#CognifyzTechnologies</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <p>
+            <u>A pet, or companion animal,</u> is an animal kept primarily for a person's company or entertainment
+            rather than
+            as a working animal, livestock, or a laboratory animal.
+            <br><br>Popular pets are often considered to have attractive/cute appearances,
+            intelligence, and relatable personalities, but some pets may be taken in on an altruistic basis (such as a
+            stray animal) and accepted by the owner regardless of these characteristics.
+        </p>
+        <h6> Click on Wikipedia in the menu to learn more! Or click on the online shop to adopt cute pets!</h6>
+        <img src="cutepets.jpg" alt="Pets">
+        <form action="#" target="_self">
+            <input type="text" id="name" placeholder="Enter your name to apply for discount!">
+            <input type="submit" value="Submit" onclick="submitForm()">
+        </form>
+    </div>
+    <footer>
+        <p>Contact: 
+            (mail to:elona.pets@gmail.com) +91000000000000<br>
+            <a href="https://www.cognifyz.com/" >#cognifyz_internship</a><br>
+            <a href="https://www.cognifyz.com/" > #cognifyzTechnologies</a>
+        </p>
+        </p>
+      </footer>
+    <script>
+        function submitForm() {
+            var name = document.getElementById("name").value;
+            alert("Thank you, " + name + "!");
+        }
+    </script>
+</body>
+
+</html>
